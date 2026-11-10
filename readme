@@ -1,0 +1,24 @@
+# PHILOSOPHERS
+
+Programme C simulant le problème du dîner des philosophes avec du multithreading. Des philosophes assis à une table essayent de manger en partageant des fourchettes, démontrant la synchronisation de threads et la prévention des deadlocks.
+
+## Concept du problème
+- N philosophes assis autour d'une table circulaire
+- Une fourchette entre chaque paire de philosophes
+- Chaque philosophe a besoin de 2 fourchettes pour manger
+- Les philosophes alternent entre manger, penser et dormir
+
+## Éléments clés de l'implémentation
+- **Mutexes** - Protection de l'accès aux fourchettes
+- **Threads** - Un thread par philosophe
+- **Gestion du temps** - Suivi des temps de repas et de mort
+- **Prévention des deadlocks** - Stratégies pour éviter les situations bloquées
+- **Logging des états** - Affichage des actions des philosophes
+
+## Détection du deadlock
+Le programme doit détecter si un philosophe meurt (pas mangé depuis trop longtemps) et arrêter la simulation.
+
+## Options d'exécution
+```
+./philo [nombre_de_philosophes] [temps_avant_mort] [temps_pour_manger] [temps_pour_dormir] [nb_repas_optionnel]
+```
